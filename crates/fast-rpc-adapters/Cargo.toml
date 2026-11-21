@@ -1,0 +1,30 @@
+[package]
+name = "fast-rpc-adapters"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Multi-RPC stream adapters (Yellowstone gRPC, local validator UDS, WebSocket, HTTP JSON-RPC) and stream normalizer"
+
+[dependencies]
+fast-rpc-core = { path = "../fast-rpc-core" }
+fast-rpc-detector = { path = "../fast-rpc-detector" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+tokio-tungstenite = { workspace = true }
+futures-util = { workspace = true }
+reqwest = { workspace = true }
+async-trait = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+yellowstone-grpc-proto = "13.0.0"
+bs58 = "0.5"
+tonic = { version = "0.14", default-features = false, features = ["channel", "tls-webpki-roots"] }
+tokio-stream = { version = "0.1", features = ["sync"] }
+
+[dev-dependencies]
+fast-rpc-bank = { path = "../fast-rpc-bank" }
+fast-rpc-clock = { path = "../fast-rpc-clock" }
+
+[lints]
+workspace = true
