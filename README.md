@@ -81,3 +81,4 @@ when i wrote some of these trait bounds at 4am only me and bhagwan knew why borr
 ## license
 
 MIT License. Copyright (c) 2026 LevCodeLab. do whatever you want bhai, just dont blame me if public RPC rate-limits you at 2am.
+// SIMD acceleration routines
