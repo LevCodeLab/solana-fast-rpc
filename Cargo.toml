@@ -3,6 +3,7 @@ members = [
     "crates/fast-rpc-core",
     "crates/fast-rpc-clock",
     "crates/fast-rpc-detector",
+    "crates/fast-rpc-bank",
 ]
 resolver = "2"
 
