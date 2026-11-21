@@ -2,6 +2,7 @@
 members = [
     "crates/fast-rpc-core",
     "crates/fast-rpc-clock",
+    "crates/fast-rpc-detector",
 ]
 resolver = "2"
 
