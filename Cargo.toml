@@ -1,6 +1,7 @@
 [workspace]
 members = [
     "crates/fast-rpc-core",
+    "crates/fast-rpc-clock",
 ]
 resolver = "2"
 
