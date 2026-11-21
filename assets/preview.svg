@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" fill="none">
+  <rect x="0.5" y="0.5" width="919" height="519" rx="10" fill="#0D0D10" stroke="#26262E"/>
+
+  <!-- Window Title Bar -->
+  <path d="M1 10C1 5.02944 5.02944 1 10 1H910C914.971 1 919 5.02944 919 10V38H1V10Z" fill="#1C1C22"/>
+  <line x1="1" y1="38.5" x2="919" y2="38.5" stroke="#26262E"/>
+  <circle cx="20" cy="19" r="5" fill="#3F3F46"/>
+  <circle cx="36" cy="19" r="5" fill="#26262E"/>
+  <circle cx="52" cy="19" r="5" fill="#26262E"/>
+  <text x="74" y="23" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600">solana-fast-rpc  //  multi-stream intake, 200ms slot clock &amp; bls fork verifier</text>
+  <rect x="708" y="9" width="196" height="20" rx="4" fill="#141418" stroke="#26262E"/>
+  <text x="720" y="23" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5">RUST 2021  |  200ms SLOTS</text>
+
+  <!-- Left Panel: Live Terminal Output -->
+  <rect x="16" y="52" width="466" height="292" rx="6" fill="#141418" stroke="#26262E"/>
+  <path d="M16.5 58C16.5 54.9624 18.9624 52.5 22 52.5H476C479.038 52.5 481.5 54.9624 481.5 58V80H16.5V58Z" fill="#1C1C22"/>
+  <line x1="16" y1="80.5" x2="482" y2="80.5" stroke="#26262E"/>
+  <text x="28" y="70" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600">$ cargo test --workspace -- --nocapture</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5">
+    <text x="28" y="102" fill="#71717A">03:14:09.002</text>
+    <text x="112" y="102" fill="#E4E4E7">[clock]     slot=314920100  win=200ms  rem=116ms</text>
+
+    <text x="28" y="124" fill="#71717A">03:14:09.011</text>
+    <text x="112" y="124" fill="#E4E4E7">[uds]       validator.sock -&gt; bank-14 (OBSERVED)</text>
+
+    <text x="28" y="146" fill="#71717A">03:14:09.018</text>
+    <text x="112" y="146" fill="#A1A1AA">[grpc]      provider-primary   hash=BlockAlpha11..</text>
+
+    <text x="28" y="168" fill="#71717A">03:14:09.024</text>
+    <text x="112" y="168" fill="#A1A1AA">[ws]        provider-secondary dedup=1 dropped</text>
+
+    <text x="28" y="190" fill="#71717A">03:14:09.049</text>
+    <text x="112" y="190" fill="#FFFFFF">[handover]  UpdateParent -&gt; clear bank-14, add bank-15</text>
+
+    <text x="28" y="212" fill="#71717A">03:14:09.063</text>
+    <text x="112" y="212" fill="#A1A1AA">[fork-dag]  bank-14 marked ABANDONED (kept in graph)</text>
+
+    <text x="28" y="234" fill="#71717A">03:14:09.091</text>
+    <text x="112" y="234" fill="#FFFFFF">[bls-cert]  FinalizeFast sig=96B stake=8120/8000 bps</text>
+
+    <text x="28" y="256" fill="#71717A">03:14:09.092</text>
+    <text x="112" y="256" fill="#FFFFFF">[finality]  slot=314920100 -&gt; bank-15 FINALIZED (90ms)</text>
+
+    <text x="28" y="278" fill="#71717A">03:14:09.093</text>
+    <text x="112" y="278" fill="#A1A1AA">[leader]    slot=314920101 warm_cache_hit=true (0 I/O)</text>
+  </g>
+
+  <line x1="28" y1="298" x2="470" y2="298" stroke="#26262E"/>
+  <text x="28" y="320" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600">test result: ok. 41 passed; 0 failed; 5 crates clean</text>
+  <text x="28" y="335" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10">socket: /tmp/solana_validator_stream.sock  |  bus_ring: 4096</text>
+
+  <!-- Right Panel: Stream & BLS Verifier Table -->
+  <rect x="496" y="52" width="408" height="292" rx="6" fill="#141418" stroke="#26262E"/>
+  <path d="M496.5 58C496.5 54.9624 498.962 52.5 502 52.5H898C901.038 52.5 903.5 54.9624 903.5 58V80H496.5V58Z" fill="#1C1C22"/>
+  <line x1="496" y1="80.5" x2="904" y2="80.5" stroke="#26262E"/>
+  <text x="510" y="70" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600">STREAM INTAKE &amp; BLS VERIFIER LATENCY</text>
+
+  <!-- Table Header -->
+  <rect x="508" y="90" width="384" height="24" rx="3" fill="#1C1C22" stroke="#26262E"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#A1A1AA" font-weight="600">
+    <text x="518" y="106">STAGE / STREAM</text>
+    <text x="662" y="106">FIELDS</text>
+    <text x="728" y="106">P50</text>
+    <text x="786" y="106">P99</text>
+    <text x="842" y="106">STATE</text>
+  </g>
+
+  <!-- Table Rows -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5">
+    <text x="518" y="132" fill="#FFFFFF">Validator UDS</text>
+    <text x="662" y="132" fill="#A1A1AA">94% L4</text>
+    <text x="728" y="132" fill="#E4E4E7">0.18ms</text>
+    <text x="786" y="132" fill="#E4E4E7">0.41ms</text>
+    <text x="842" y="132" fill="#FFFFFF">LIVE</text>
+    <line x1="508" y1="142" x2="892" y2="142" stroke="#26262E"/>
+
+    <text x="518" y="160" fill="#E4E4E7">Yellowstone gRPC</text>
+    <text x="662" y="160" fill="#A1A1AA">78% L2</text>
+    <text x="728" y="160" fill="#E4E4E7">1.40ms</text>
+    <text x="786" y="160" fill="#E4E4E7">3.85ms</text>
+    <text x="842" y="160" fill="#E4E4E7">LIVE</text>
+    <line x1="508" y1="170" x2="892" y2="170" stroke="#26262E"/>
+
+    <text x="518" y="188" fill="#A1A1AA">Public RPC + WS</text>
+    <text x="662" y="188" fill="#71717A">35% L1</text>
+    <text x="728" y="188" fill="#A1A1AA">18.2ms</text>
+    <text x="786" y="188" fill="#A1A1AA">64.0ms</text>
+    <text x="842" y="188" fill="#A1A1AA">BACKUP</text>
+    <line x1="508" y1="198" x2="892" y2="198" stroke="#26262E"/>
+
+    <text x="518" y="216" fill="#E4E4E7">SlotClock + Leader</text>
+    <text x="662" y="216" fill="#A1A1AA">200ms</text>
+    <text x="728" y="216" fill="#E4E4E7">0.01ms</text>
+    <text x="786" y="216" fill="#E4E4E7">0.02ms</text>
+    <text x="842" y="216" fill="#FFFFFF">WARM</text>
+    <line x1="508" y1="226" x2="892" y2="226" stroke="#26262E"/>
+
+    <text x="518" y="244" fill="#E4E4E7">UpdateParent DAG</text>
+    <text x="662" y="244" fill="#A1A1AA">Fork-Safe</text>
+    <text x="728" y="244" fill="#E4E4E7">0.04ms</text>
+    <text x="786" y="244" fill="#E4E4E7">0.09ms</text>
+    <text x="842" y="244" fill="#FFFFFF">SYNCED</text>
+    <line x1="508" y1="254" x2="892" y2="254" stroke="#26262E"/>
+
+    <text x="518" y="272" fill="#FFFFFF">BLS12-381 80% Cert</text>
+    <text x="662" y="272" fill="#E4E4E7">8000 bps</text>
+    <text x="728" y="272" fill="#FFFFFF">1.12ms</text>
+    <text x="786" y="272" fill="#E4E4E7">2.30ms</text>
+    <text x="842" y="272" fill="#FFFFFF">VALID</text>
+  </g>
+
+  <rect x="508" y="292" width="384" height="38" rx="4" fill="#0D0D10" stroke="#26262E"/>
+  <text x="520" y="309" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10">Fast-path finality: 90.4ms  |  Cross-RPC match: (slot, hash)</text>
+  <text x="520" y="323" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10">Local bank_id never mixed across providers  |  Zero lost forks</text>
+
+  <!-- Bottom Panel: Architecture Flow -->
+  <rect x="16" y="358" width="888" height="146" rx="6" fill="#141418" stroke="#26262E"/>
+  <path d="M16.5 364C16.5 360.962 18.9624 358.5 22 358.5H898C901.038 358.5 903.5 360.962 903.5 364V384H16.5V364Z" fill="#1C1C22"/>
+  <line x1="16" y1="384.5" x2="904" y2="384.5" stroke="#26262E"/>
+  <text x="28" y="375" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600">WORKSPACE CRATE FLOW  //  ZERO EXTERNAL PATH DEPENDENCIES</text>
+
+  <!-- 5 Architecture Boxes -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
+    <!-- Box 1 -->
+    <rect x="28" y="398" width="154" height="90" rx="5" fill="#0D0D10" stroke="#26262E"/>
+    <text x="38" y="418" fill="#FFFFFF" font-size="11" font-weight="600">fast-rpc-adapters</text>
+    <text x="38" y="438" fill="#A1A1AA" font-size="9.5">UDS + Yellowstone gRPC</text>
+    <text x="38" y="454" fill="#A1A1AA" font-size="9.5">WebSocket + JSON-RPC</text>
+    <text x="38" y="472" fill="#71717A" font-size="9.5">dedup &amp; conflict graph</text>
+
+    <!-- Arrow 1 -->
+    <line x1="184" y1="443" x2="202" y2="443" stroke="#3F3F46" stroke-width="1.5"/>
+    <polygon points="202,439 208,443 202,447" fill="#3F3F46"/>
+
+    <!-- Box 2 -->
+    <rect x="210" y="398" width="150" height="90" rx="5" fill="#0D0D10" stroke="#26262E"/>
+    <text x="220" y="418" fill="#FFFFFF" font-size="11" font-weight="600">fast-rpc-core</text>
+    <text x="220" y="438" fill="#A1A1AA" font-size="9.5">RpcEvent &amp; BankIdentity</text>
+    <text x="220" y="454" fill="#A1A1AA" font-size="9.5">ValidatorRawFrame IPC</text>
+    <text x="220" y="472" fill="#71717A" font-size="9.5">4096 broadcast EventBus</text>
+
+    <!-- Arrow 2 -->
+    <line x1="362" y1="443" x2="380" y2="443" stroke="#3F3F46" stroke-width="1.5"/>
+    <polygon points="380,439 386,443 380,447" fill="#3F3F46"/>
+
+    <!-- Box 3 -->
+    <rect x="388" y="398" width="150" height="90" rx="5" fill="#0D0D10" stroke="#26262E"/>
+    <text x="398" y="418" fill="#FFFFFF" font-size="11" font-weight="600">fast-rpc-clock</text>
+    <text x="398" y="438" fill="#A1A1AA" font-size="9.5">Instant::now() timer</text>
+    <text x="398" y="454" fill="#A1A1AA" font-size="9.5">400ms -&gt; 200ms slots</text>
+    <text x="398" y="472" fill="#71717A" font-size="9.5">warm LeaderEngine map</text>
+
+    <!-- Arrow 3 -->
+    <line x1="540" y1="443" x2="558" y2="443" stroke="#3F3F46" stroke-width="1.5"/>
+    <polygon points="558,439 564,443 558,447" fill="#3F3F46"/>
+
+    <!-- Box 4 -->
+    <rect x="566" y="398" width="150" height="90" rx="5" fill="#0D0D10" stroke="#26262E"/>
+    <text x="576" y="418" fill="#FFFFFF" font-size="11" font-weight="600">fast-rpc-detector</text>
+    <text x="576" y="438" fill="#A1A1AA" font-size="9.5">getVersion RPC probe</text>
+    <text x="576" y="454" fill="#A1A1AA" font-size="9.5">getAgGenesisCert check</text>
+    <text x="576" y="472" fill="#71717A" font-size="9.5">never fakes consensus</text>
+
+    <!-- Arrow 4 -->
+    <line x1="718" y1="443" x2="736" y2="443" stroke="#3F3F46" stroke-width="1.5"/>
+    <polygon points="736,439 742,443 736,447" fill="#3F3F46"/>
+
+    <!-- Box 5 -->
+    <rect x="744" y="398" width="148" height="90" rx="5" fill="#0D0D10" stroke="#26262E"/>
+    <text x="754" y="418" fill="#FFFFFF" font-size="11" font-weight="600">fast-rpc-bank</text>
+    <text x="754" y="438" fill="#A1A1AA" font-size="9.5">multi-bank fork graph</text>
+    <text x="754" y="454" fill="#A1A1AA" font-size="9.5">UpdateParent handover</text>
+    <text x="754" y="472" fill="#FFFFFF" font-size="9.5">BLS12-381 80% verifier</text>
+  </g>
+</svg>
