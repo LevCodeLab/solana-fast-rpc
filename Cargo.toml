@@ -1,0 +1,33 @@
+[workspace]
+members = []
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/LevCodeLab/solana-fast-rpc"
+
+[workspace.dependencies]
+tokio = { version = "1.36", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json"] }
+tokio-tungstenite = { version = "0.21", features = ["connect", "handshake", "native-tls"] }
+futures-util = "0.3"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+async-trait = "0.1"
+thiserror = "1.0"
+
+[workspace.lints.clippy]
+field_reassign_with_default = "allow"
+redundant_pattern_matching = "allow"
+bool_assert_comparison = "allow"
+type_complexity = "allow"
+print_literal = "allow"
+unnecessary_map_or = "allow"
+get_first = "allow"
+wildcard_in_or_patterns = "allow"
+needless_borrows_for_generic_args = "allow"
+large_enum_variant = "allow"
