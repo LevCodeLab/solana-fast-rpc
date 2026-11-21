@@ -17,6 +17,8 @@ Wrote this at 3am with cold adrak chai because one public RPC was 4 slots behind
 
 Standard RPC providers charge heavy monthly subscriptions while adding 50ms to 200ms network overhead. `solana-fast-rpc` runs local-first with zero-copy ring buffers.
 
+![Benchmark Showdown](./assets/benchmarks.svg)
+
 | Metric | Public RPC | Dedicated Node (\$1,000/mo) | solana-fast-rpc (Zero Cost) |
 | :--- | :--- | :--- | :--- |
 | Slot Detection Latency | 250ms to 600ms | 40ms to 80ms | **1.2ms (Zero-Copy Ring Buffer)** |

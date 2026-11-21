@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="460" viewBox="0 0 920 460" fill="none">
+  <!-- Outer Window Container -->
+  <rect x="0.5" y="0.5" width="919" height="459" rx="10" fill="#0D0D10" stroke="#26262E"/>
+
+  <!-- Window Header -->
+  <path d="M1 10C1 5.02944 5.02944 1 10 1H910C914.971 1 919 5.02944 919 10V38H1V10Z" fill="#1C1C22"/>
+  <line x1="1" y1="38.5" x2="919" y2="38.5" stroke="#26262E"/>
+  <circle cx="20" cy="19" r="5" fill="#3F3F46"/>
+  <circle cx="36" cy="19" r="5" fill="#26262E"/>
+  <circle cx="52" cy="19" r="5" fill="#26262E"/>
+  <text x="74" y="23" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600">solana-fast-rpc  //  low-latency benchmark comparison</text>
+  <rect x="712" y="9" width="192" height="20" rx="4" fill="#141418" stroke="#26262E"/>
+  <text x="724" y="23" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5">BENCHMARK SHOWDOWN</text>
+
+  <!-- Title & Subtitle -->
+  <text x="32" y="74" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="700">Slot Ingestion Latency Comparison</text>
+  <text x="32" y="96" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12">Lower latency means earlier transaction dispatch to the upcoming validator slot leader</text>
+
+  <!-- Benchmark Bars Area -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
+    <!-- Row 1: Public RPC -->
+    <text x="32" y="140" fill="#E4E4E7" font-size="12" font-weight="600">Public JSON-RPC</text>
+    <text x="32" y="156" fill="#71717A" font-size="10.5">HTTP Polling, Rate-Limited</text>
+    <rect x="230" y="128" width="560" height="32" rx="4" fill="#18181E" stroke="#26262E"/>
+    <rect x="230" y="128" width="540" height="32" rx="4" fill="#26262E"/>
+    <text x="782" y="149" fill="#FFFFFF" font-size="12" font-weight="700">285.0 ms</text>
+
+    <!-- Row 2: Dedicated Private Node -->
+    <text x="32" y="208" fill="#E4E4E7" font-size="12" font-weight="600">Dedicated Node</text>
+    <text x="32" y="224" fill="#71717A" font-size="10.5">Enterprise RPC ($1,200/mo)</text>
+    <rect x="230" y="196" width="560" height="32" rx="4" fill="#18181E" stroke="#26262E"/>
+    <rect x="230" y="196" width="130" height="32" rx="4" fill="#383842"/>
+    <text x="372" y="217" fill="#FFFFFF" font-size="12" font-weight="700">48.5 ms</text>
+
+    <!-- Row 3: solana-fast-rpc -->
+    <text x="32" y="276" fill="#FFFFFF" font-size="12" font-weight="700">solana-fast-rpc</text>
+    <text x="32" y="292" fill="#A1A1AA" font-size="10.5">Local-first Zero-Copy ($0/mo)</text>
+    <rect x="230" y="264" width="560" height="32" rx="4" fill="#18181E" stroke="#FFFFFF"/>
+    <rect x="230" y="264" width="22" height="32" rx="4" fill="#FFFFFF"/>
+    <text x="264" y="285" fill="#FFFFFF" font-size="13" font-weight="800">1.2 ms  (40x faster)</text>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="32" y1="324" x2="888" y2="324" stroke="#26262E"/>
+
+  <!-- Four Metric Panels Below -->
+  <!-- Metric 1 -->
+  <rect x="32" y="344" width="200" height="88" rx="6" fill="#141418" stroke="#26262E"/>
+  <text x="48" y="376" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="24" font-weight="700">1.2 ms</text>
+  <text x="48" y="398" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600">Slot Observation</text>
+  <text x="48" y="414" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10">Zero-copy ring buffer</text>
+
+  <!-- Metric 2 -->
+  <rect x="250" y="344" width="200" height="88" rx="6" fill="#141418" stroke="#26262E"/>
+  <text x="266" y="376" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="24" font-weight="700">200 ms</text>
+  <text x="266" y="398" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600">Hardware Slot Clock</text>
+  <text x="266" y="414" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10">Sub-slot microsecond timer</text>
+
+  <!-- Metric 3 -->
+  <rect x="468" y="344" width="200" height="88" rx="6" fill="#141418" stroke="#26262E"/>
+  <text x="484" y="376" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="24" font-weight="700">0.0 ms</text>
+  <text x="484" y="398" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600">Leader Resolution</text>
+  <text x="484" y="414" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10">Pre-cached in RAM BTreeMap</text>
+
+  <!-- Metric 4 -->
+  <rect x="686" y="344" width="202" height="88" rx="6" fill="#141418" stroke="#26262E"/>
+  <text x="702" y="376" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="24" font-weight="700">$0 / mo</text>
+  <text x="702" y="398" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600">Open Source</text>
+  <text x="702" y="414" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10">Free &amp; uncapped forever</text>
+</svg>
