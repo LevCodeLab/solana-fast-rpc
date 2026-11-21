@@ -1,5 +1,7 @@
 [workspace]
-members = []
+members = [
+    "crates/fast-rpc-core",
+]
 resolver = "2"
 
 [workspace.package]
